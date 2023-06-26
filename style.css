@@ -1,0 +1,36 @@
+section {
+    border-radius: 10px;
+    width: 550px;
+    height: -20px;
+    margin: auto;
+    background-color: grey;
+    
+    
+}
+h1 {
+color: rgb(0, 0, 0);
+margin-left: 150px;
+margin-top: 120px;
+}
+
+.celda {
+    width: 100px;
+    height: 100px;
+border: 1px solid;
+color: gainsboro;
+background-color: white;
+}
+
+.cellcontainer {
+ display: grid;
+ grid-template-columns: repeat(3, auto);
+width: 225px;
+margin-left: 53px;
+}
+
+.restaurarBtn {
+    margin-top: 80px;
+    background-color: rgb(17, 23, 198);
+    color: white;
+    margin-left: 150px;
+}
