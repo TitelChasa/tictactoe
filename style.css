@@ -31,9 +31,15 @@ width: 225px;
 margin-left: 53px;
 }
 
-.restaurarBtn {
-    margin-top: 80px;
-    background-color: rgb(72, 76, 203);
-    color: white;
-    margin-left: 150px;
+#btn {
+color: blue;
+margin-left: 70px;
+}
+
+#turno {
+    margin-left: 400px;
+}
+
+#simbolo {
+    margin-left: 400px;
 }
