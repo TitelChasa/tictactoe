@@ -2,129 +2,176 @@ let juego = document.getElementById("juego");
 let btnreinicio = document.getElementById("btn");
 const elem = document.getElementsByClassName("celda");
 
-let listaV=[]
-let cir= "O";
+let ganador = document.getElementById("ganador");
 
+let listaV = [];
 
+Gato();
+//ESTE ES MI FLUJO DE MI PROGRAMA MAIN
 
-for (let i = 0; i < 9; i++) {
-  
-  elem[i].addEventListener("click", function () {
-    if (elem[i].textContent === "") {
-      elem[i].innerHTML = "X";
-      listaV.push[i]
-      juegoComputadora()
-    }
-  });
+function Gato() {
+  for (let i = 0; i < 9; i++) {
+    elem[i].addEventListener("click", function () {
+      if (elem[i].textContent === "") {
+        elem[i].innerHTML = "X";
+        console.log(elem[i]);
+        listaV.push(i);
+
+        juegoComputadora();
+      }
+
+      if (
+        elem[0].textContent == "X" &&
+        elem[4].textContent == "X" &&
+        elem[8].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[2].textContent == "X" &&
+        elem[4].textContent == "X" &&
+        elem[6].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[0].textContent == "X" &&
+        elem[3].textContent == "X" &&
+        elem[6].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[1].textContent == "X" &&
+        elem[4].textContent == "X" &&
+        elem[7].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[2].textContent == "X" &&
+        elem[5].textContent == "X" &&
+        elem[8].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[0].textContent == "X" &&
+        elem[1].textContent == "X" &&
+        elem[2].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[3].textContent == "X" &&
+        elem[4].textContent == "X" &&
+        elem[5].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[6].textContent == "X" &&
+        elem[7].textContent == "X" &&
+        elem[8].textContent == "X"
+      ) {
+        ganador.innerHTML = "Ganador: Usuario";
+      }
+      if (
+        elem[0].textContent == "O" &&
+        elem[4].textContent == "O" &&
+        elem[8].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[2].textContent == "O" &&
+        elem[4].textContent == "O" &&
+        elem[6].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[0].textContent == "O" &&
+        elem[3].textContent == "O" &&
+        elem[6].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[1].textContent == "O" &&
+        elem[4].textContent == "O" &&
+        elem[7].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[2].textContent == "O" &&
+        elem[5].textContent == "O" &&
+        elem[8].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[0].textContent == "O" &&
+        elem[1].textContent == "O" &&
+        elem[2].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[3].textContent == "O" &&
+        elem[4].textContent == "O" &&
+        elem[5].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+      if (
+        elem[6].textContent == "O" &&
+        elem[7].textContent == "O" &&
+        elem[8].textContent == "O"
+      ) {
+        ganador.innerHTML = "Ganador: la maquina";
+      }
+    });
+
+    console.log(elem);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-function juegoComputadora(){
-  
-  for (let i= 0; i < elem.length; i++) {
-    
-    if (elem[i].textContent==="") {
-
+function juegoComputadora() {
+  for (let i = 0; i < elem.length; i++) {
+    if (elem[i].textContent === "") {
       console.log("ESTOY VACIO");
     }
-    
   }
 
   let perro = filtrar();
 
-setTimeout(() => {
+  setTimeout(() => {
+    console.log(perro);
+    elem[perro].innerHTML = "O";
+  }, 1000);
 
-  console.log(perro)
-  elem[perro].innerHTML = cir;
-}, 1000);
-
- listaV.push(perro);
-
-
+  listaV.push(perro);
 }
 
-
-function filtrar(){
-
-  let listaD = []
-    //recorrer lista 
+function filtrar() {
+  let listaD = [];
+  //recorrer lista
   for (let i = 0; i < elem.length; i++) {
-   if (elem[i].textContent==="") {
-    listaD.push(i)
-   }
-  
+    if (elem[i].textContent === "") {
+      listaD.push(i);
+    }
   }
 
-  console.log(listaD.length)
-  let game = Math.floor(Math.random()*listaD.length)
-  
-  
+  console.log(listaD.length);
+  let game = Math.floor(Math.random() * listaD.length);
+
   return listaD[game];
-  
-  
-  
-  }
-  
+}
 
+btnreinicio.addEventListener("click", reset);
 
 function reset() {
   window.location.reload();
 }
-
-  // let condicion = true;
-  // let contador = 0
-  // while (condicion){
-  //     console.log("Hola")
-  //     cajaBasida="O"
-  //     if (cajaBasida==0){
-  //         condicion = false
-  //     }
-  // }
-
-
-
-//  function Reiniciar() {
-//   cajas.forEach(function (celdas) {
-//     celdas.textContent = "";
-//     celdas.classList.remove("X", "O");
-
-//     document.addEventListener("keydown", function (event) {
-//       if (event.key === "Enter") {
-//         document.getElementById("reiniciar").click();
-//       }
-//   });
-
-//   juego = "X";
-// }
-
-//     juego.forEach(function (jugar) {
-
-//        juegos.addEventListener("click", function () {
-
-//      if (juegos.textContent === "") {
-//      juegos.textContent = jugador1;
-//     juegos.classList.add(jugador1);
-//    if (checkWin()) {
-//   alert(jugador1 + " wins!");
-
-//   reset();
-// } else if (checkDraw()) {
-//    alert("It's a draw!");
-//     reset();
-// } else {
-//   jugador1 = jugador1 === "X" ? "O" : "X";
-//  }
-// }
-// });
-// });
-
-// *
