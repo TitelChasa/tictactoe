@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tictactie</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="celda" cellIndex="0" ></div>
-<section>
-<h1 id="juego">tic-tac-toe</h1>
-<h1 id="ganador"></h1>
-<h4 id="turno">Turno</h4>
-<h4 id="simbolo">simbolo</h4>
-<div class="cellcontainer">
-<div id="celda" cellIndex="0" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-<div cellIndex="cuadro" class="celda"></div>
-</div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="celda" cellIndex="0"></div>
+    <section>
+      <h1 id="juego">TIC TAC TOE</h1>
+      <p id="ganador"></p>
+      <div class="cellcontainer">
+        <div id="celda" cellIndex="0" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+        <div cellIndex="cuadro" class="celda"></div>
+      </div>
 
-<div id="divb">
-  <h3 id="ganador"></h3>
-</div>
+      <div class="turnos">
+        <p id="menX"></p>
+      </div>
+      <div class="sim">
+        <p id="simbolos"></p>
+      </div>
 
-<br>
-<div id="btn"><button id="btn">Jugar de Nuevo</button>
-  </div>
-  <br>
-</section>
+      <img id="imgP" src="imagenes/37506.png" alt="" srcset="" />
+      <img id="imgB" src="imagenes/7249411.png" alt="" srcset="" />
+      <br />
+      <div id="btn"><button id="btn">Jugar de Nuevo</button></div>
+      <br />
+    </section>
 
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
