@@ -1,8 +1,8 @@
 let juego = document.getElementById("juego");
 let btnreinicio = document.getElementById("btn");
 const elem = document.getElementsByClassName("celda");
-
-let ganador = document.getElementById("ganador");
+let turnoX = document.getElementById("menX");
+let sim2 = document.getElementById("simbolos");
 
 let listaV = [];
 
@@ -10,9 +10,12 @@ Gato();
 //ESTE ES MI FLUJO DE MI PROGRAMA MAIN
 
 function Gato() {
+  turnoX.innerHTML="Turno : Usuario"
+  sim2.innerHTML="simbolo : X"
   for (let i = 0; i < 9; i++) {
     elem[i].addEventListener("click", function () {
       if (elem[i].textContent === "") {
+    
         elem[i].innerHTML = "X";
         console.log(elem[i]);
         listaV.push(i);
@@ -26,6 +29,7 @@ function Gato() {
         elem[8].textContent == "X"
       ) {
         ganador.innerHTML = "Ganador: Usuario";
+       
       }
       if (
         elem[2].textContent == "X" &&
@@ -146,11 +150,17 @@ function juegoComputadora() {
   }
 
   let perro = filtrar();
-
+  turnoX.innerHTML="Turno : Computadora"
+  sim2.innerHTML="simbolo : O"
   setTimeout(() => {
     console.log(perro);
+ 
     elem[perro].innerHTML = "O";
-  }, 1000);
+    turnoX.innerHTML="Turno : Usuario"
+    sim2.innerHTML="simbolo : X"
+  }, 1500);
+
+
 
   listaV.push(perro);
 }
@@ -175,3 +185,6 @@ btnreinicio.addEventListener("click", reset);
 function reset() {
   window.location.reload();
 }
+
+
+    
