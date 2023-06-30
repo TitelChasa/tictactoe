@@ -1,45 +1,66 @@
+@media (max-width: 768px) {
+  body {
+    background: rgb(11, 10, 10);
+  }
+}
+
+
 section {
-    border-radius: 10px;
-    width: 550px;
-    height: -20px;
-    margin: auto;
-    background-color: rgb(201, 200, 200);
-    
-    
+  border-radius: 100px;
+  border-color: black;
+  width: 500px;
+  height: -20px;
+  margin: auto;
+  background-color: rgb(55, 107, 222);
+
 }
 h1 {
-color: rgb(0, 0, 0);
-margin-left: 150px;
-margin-top: 120px;
+  color: rgb(0, 0, 0);
+  margin-left: 175px;
+  margin-top: 120px;
 }
 
 .celda {
-width: 100px;
-height: 100px;
-text-align: center;
+  width: 100px;
+  height: 100px;
+  text-align: center;
 
-font-size: 43px;
-border: 2px solid;
-color: rgb(0, 0, 0);
-background-color: white;
+  font-size: 43px;
+  border: 2px solid;
+  color: rgb(0, 0, 0);
+  background-color: white;
 }
 
 .cellcontainer {
- display: grid;
- grid-template-columns: repeat(3, auto);
-width: 225px;
-margin-left: 53px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 225px;
+  margin-left: 90px;
 }
 
 #btn {
-color: blue;
-margin-left: 70px;
+  color: blue;
+  margin-left: 100px;
 }
 
-#turno {
-    margin-left: 400px;
+#ganador {
+  margin-left: 190px;
+}
+#menX {
+  margin-left: 200px;
 }
 
-#simbolo {
-    margin-left: 400px;
+#simbolos {
+  margin-left: 210px;
+}
+
+#imgP {
+  width: 30%;
+  margin-left: 60%;
+}
+
+#imgB {
+  width: 150px;
+  margin-top: -250px;
+  margin-left: 50px;
 }
